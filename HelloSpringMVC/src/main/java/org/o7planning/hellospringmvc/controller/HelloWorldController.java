@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -35,8 +36,11 @@ public class HelloWorldController {
 	
 	//cách khác đe requestMap
 	@RequestMapping("/helloDay2")
-	public ModelAndView sayHello(HttpServletRequest request) {
-		request.setAttribute("person", person);
+	public ModelAndView sayHello(HttpServletRequest request,
+		@RequestParam(name="user",required= true) String username ) {
+		//required =true , Bat buoc phai co trong Request Client, 
+		//request.setAttribute("person", person);
+		request.setAttribute("greeting", username);
 		return new ModelAndView("helloworld");
 		
 	}

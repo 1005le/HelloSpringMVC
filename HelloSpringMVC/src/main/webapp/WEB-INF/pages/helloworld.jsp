@@ -7,7 +7,7 @@
  
  
 <body>
-   <!-- <h1>${greeting}</h1> --> 
+    <h1>${greeting}</h1> 
     <p> ${person.name}</h1></p>
 </body>
  
