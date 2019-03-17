@@ -1,6 +1,7 @@
 package org.o7planning.hellospringmvc.model;
 
 public class Person {
+	//Helllo Person
 private String name;
 private String address;
 
