@@ -1,0 +1,15 @@
+<beans>
+<bean id="person" class="org.o7planning.hellospringmvc.model.Person" init-method="init"
+destroy-method="destroy" scope="singleton">
+<contructor-org name="name" value="Levinh"></contructor-org>
+<contructor-org address="address" value="HN"></contructor-org>
+
+<!-- <property name="name" value="Le Vinh"></property> -->
+</bean>
+//cách su dung inject trong bean
+<bean id="order" class="org.o7planning.hellospringmvc.model.Order" autowire="byName">
+<property name="person" ref="person"></property>
+<contructor-org name="name" ref="person"></contructor-org>
+
+</bean>
+</beans>
